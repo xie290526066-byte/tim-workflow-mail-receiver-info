@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私说明 — TIM Workflow Mail Receiver</title>
+<style>body{font:18px/1.7 system-ui,sans-serif;max-width:760px;margin:64px auto;padding:0 24px;color:#18232e}h1{line-height:1.2}h2{font-size:1.2em;margin-top:32px}a{color:#125fa6}</style>
+<main>
+<h1>隐私与数据使用说明</h1>
+<p>TIM Workflow Mail Receiver · 2026年10月13日</p>
+<h2>用途和读取范围</h2>
+<p>本工具仅为所有者的个人协作工作流提供收信通知。通过 Gmail 只读授权读取邮箱身份、变化记录、邮件标识、发件人与接收时间等元数据，筛选指定协作机器人的邮件。Gmail 只读授权本身允许读取邮件，程序筛选不是账号级权限隔离。</p>
+<h2>数据流向</h2>
+<p>Google Gmail Watch 和 Cloud Pub/Sub 传递邮箱变化通知；本机接收程序查询 Gmail，向所有者指定的 Codex 聊天发送匹配邮件的标识。接收程序不会把邮件正文或附件嵌入该通知。后续主控可能通过独立的 Gmail 连接读取正文及附件，并交由 Codex 处理和核查；这属于另一条由所有者授权的工作流，受相应服务的数据政策约束。</p>
+<h2>存储和保留</h2>
+<p>OAuth 凭据存于所有者电脑的配置目录。邮件标识、变化游标、投递状态和运行记录保存在本机，用于恢复和防止重复通知。任务原文、附件及验收记录可另存于所有者的任务目录。当前没有自动按期删除机制，由所有者决定保留或删除；公开说明页不包含凭据、邮件内容或任务记录。</p>
+<h2>控制与撤销</h2>
+<p>所有者可在 Google 账号的第三方连接管理中撤销本应用授权，并停止本机接收任务。撤销授权不会自动删除已保存的本机任务资料，也不会删除独立服务中的既有聊天记录；这些记录需在相应位置另行管理。</p>
+<h2>使用限制</h2>
+<p>本工具不使用 Gmail 数据投放广告、出售数据或训练自身模型。独立连接的 AI 服务如何处理其收到的数据，以所有者的服务设置及该服务政策为准。本工具不通过该 Gmail 只读授权发送、删除或修改邮件。</p>
+<p><a href="index.html">返回应用说明</a></p>
+</main>
+</html>
